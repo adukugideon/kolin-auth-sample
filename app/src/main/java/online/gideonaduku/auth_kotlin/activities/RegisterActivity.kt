@@ -1,4 +1,4 @@
-package online.gideonaduku.auth_kotlin
+package online.gideonaduku.auth_kotlin.activities
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -9,6 +9,8 @@ import android.support.v7.widget.AppCompatButton
 import android.support.v7.widget.AppCompatTextView
 import android.view.View
 import android.widget.RelativeLayout
+import online.gideonaduku.auth_kotlin.R
+import online.gideonaduku.auth_kotlin.db.DatabaseHelper
 import online.gideonaduku.auth_kotlin.helpers.InputValidation
 import online.gideonaduku.auth_kotlin.model.User
 
@@ -25,7 +27,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var textInputLayoutPassword: TextInputLayout
     private lateinit var textInputLayoutConfirmPassword: TextInputLayout
  
-    private lateinit var textInputEditTextName: TextInputEditText
+
     private lateinit var textInputEditTextEmail: TextInputEditText
     private lateinit var textInputEditTextPassword: TextInputEditText
     private lateinit var textInputEditTextConfirmPassword: TextInputEditText
@@ -126,7 +128,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
  
         if (!databaseHelper!!.checkUser(textInputEditTextEmail!!.text.toString().trim())) {
  
-            var user = User(name = textInputEditTextName!!.text.toString().trim(),
+            var user = User(
                     email = textInputEditTextEmail!!.text.toString().trim(),
                     password = textInputEditTextPassword!!.text.toString().trim())
  

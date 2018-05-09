@@ -1,4 +1,4 @@
-package online.gideonaduku.auth_kotlin
+package online.gideonaduku.auth_kotlin.helpers
 
 import android.app.Activity
 import android.content.Context

@@ -1,9 +1,10 @@
-package online.gideonaduku.auth_kotlin
+package online.gideonaduku.auth_kotlin.activities
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import online.gideonaduku.auth_kotlin.R
 
 class MainActivity : AppCompatActivity() {
 

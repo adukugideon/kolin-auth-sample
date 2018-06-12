@@ -78,8 +78,8 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
      * This method is to initialize listeners
      */
     private fun initListeners() {
-        appCompatButtonRegister!!.setOnClickListener(this)
-        appCompatTextViewLoginLink!!.setOnClickListener(this)
+        appCompatButtonRegister.setOnClickListener(this)
+        appCompatTextViewLoginLink.setOnClickListener(this)
  
     }
  
@@ -112,30 +112,30 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
      * This method is to validate the input text fields and post data to SQLite
      */
     private fun postDataToSQLite() {
-        if (!inputValidation!!.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return
         }
-        if (!inputValidation!!.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return
         }
-        if (!inputValidation!!.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
             return
         }
-        if (!inputValidation!!.isInputEditTextMatches(textInputEditTextPassword, textInputEditTextConfirmPassword,
+        if (!inputValidation.isInputEditTextMatches(textInputEditTextPassword, textInputEditTextConfirmPassword,
                         textInputLayoutConfirmPassword, getString(R.string.error_password_match))) {
             return
         }
  
-        if (!databaseHelper!!.checkUser(textInputEditTextEmail!!.text.toString().trim())) {
+        if (!databaseHelper.checkUser(textInputEditTextEmail.text.toString().trim())) {
  
-            var user = User(
-                    email = textInputEditTextEmail!!.text.toString().trim(),
-                    password = textInputEditTextPassword!!.text.toString().trim())
+            val user = User(
+                    email = textInputEditTextEmail.text.toString().trim(),
+                    password = textInputEditTextPassword.text.toString().trim())
  
-            databaseHelper!!.addUser(user)
+            databaseHelper.addUser(user)
  
             // Snack Bar to show success message that record saved successfully
-            Snackbar.make(registerRalativeLayout!!, getString(R.string.success_message), Snackbar.LENGTH_LONG).show()
+            Snackbar.make(registerRalativeLayout, getString(R.string.success_message), Snackbar.LENGTH_LONG).show()
             emptyInputEditText()
  
  

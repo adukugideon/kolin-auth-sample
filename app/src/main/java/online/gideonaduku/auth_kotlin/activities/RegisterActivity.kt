@@ -141,7 +141,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
  
         } else {
             // Snack Bar to show error message that record already exists
-            Snackbar.make(registerRalativeLayout!!, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show()
+            Snackbar.make(registerRalativeLayout, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show()
         }
  
  
@@ -152,8 +152,8 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
      */
     private fun emptyInputEditText() {
 
-        textInputEditTextEmail!!.text = null
-        textInputEditTextPassword!!.text = null
-        textInputEditTextConfirmPassword!!.text = null
+        textInputEditTextEmail.text != null
+        textInputEditTextPassword.text != null
+        textInputEditTextConfirmPassword.text != null
     }
 }

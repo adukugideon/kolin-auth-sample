@@ -7,16 +7,16 @@ import android.support.design.widget.TextInputLayout
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
- 
+
 class InputValidation
- 
+
 /**
  * constructor
  *
  * @param context
  */
 (private val context: Context) {
- 
+
     /**
      * method to check InputEditText filled .
      *
@@ -34,11 +34,11 @@ class InputValidation
         } else {
             textInputLayout.isErrorEnabled = false
         }
- 
+
         return true
     }
- 
- 
+
+
     /**
      * method to check InputEditText has valid email .
      *
@@ -58,7 +58,7 @@ class InputValidation
         }
         return true
     }
- 
+
     /**
      * method to check both InputEditText value matches.
      *
@@ -80,7 +80,7 @@ class InputValidation
         }
         return true
     }
- 
+
     /**
      * method to Hide keyboard
      *

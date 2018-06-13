@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginRelativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:paddingBottom="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    android:paddingTop="20dp"
-    android:id="@+id/loginRelativeLayout"
-    android:background="#fff">
-
+    android:paddingTop="20dp">
 
 
     <android.support.v7.widget.LinearLayoutCompat
@@ -36,8 +34,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Emaill"
                 android:inputType="text"
-                android:maxLines="1"
-                />
+                android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -52,8 +49,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:maxLines="1"
-                />
+                android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.AppCompatButton
@@ -61,9 +57,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:textColor="#fff"
             android:background="@color/colorPrimary"
-            android:text="Login" />
+            android:text="Login"
+            android:textColor="#fff" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/textViewLinkRegister"
